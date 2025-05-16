@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --accent: #acc5c7;
+  --accent-hover: #8faeb0;
+  --text-dark: #333;
+  --shadow: #4e6c71;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e9eeee;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.topper-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.topper-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Titelcontainer (zentriert, weiß mit schwarzem Rand) */
+.title-box {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+.title-box h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+  padding: 0 1rem;
+  text-transform: uppercase;
+}
+
+/* Textbox */
+.content-box {
+  position: absolute;
+  top: 25%;
+  left: 13%;
+  width: 35%;
+  color: black;
+}
+
+.content-box2 {
+  position: absolute;
+  top: 30%;
+  width: auto;
+  right: 170px;
+  color: black;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.start-button {
+  display: inline-block;
+  background-color: #e9eeee;
+  color: #4e6c71;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 30px 50px;
+  text-decoration: none;
+  border: 2px solid var(--shadow);
+  box-shadow: 2px 2px var(--shadow);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.start-button:hover {
+  background-color: #4e6c71;
+  color: white;
+  transform: scale(1.05);
+
+}
+
+.edge-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: -5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title-box h1 {
+    font-size: 1.3rem;
+    padding: 0 0.5rem;
+  }
+
+  .content-box {
+    width: 80%;
+    top: 20%;
+    right: 10%;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .start-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}

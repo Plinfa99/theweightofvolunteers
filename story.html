@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Society Pillars</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="fixed-container">
+
+    <section class="wave-header">
+      <div class="wave-top"></div>
+      <div class="title-wrapper">
+        <h1 class="outline">IMPORTANT PILLAR OF OUR SOCIETY!...?</h1>
+        <h1 class="outline">BUT IT IS NOT THE ONLY PILLAR!</h1>
+      </div>
+    </section>
+<section class="full-screen" id="section-1">
+    <div class="text-content">
+      <p>Is volunteer work really an important pillar of our society?<br></p>
+      <p>
+        <strong>Let us take a closer look:</strong>
+        A society is based on seven different pillars while each represent a certain area of institutions.
+        All of them are equally important for a functional society.<br>
+      </p>
+    </div>
+
+    <section class="pillars">
+      <!-- ECONOMY -->
+      <div class="pillar economy">
+        <div class="core" onclick="togglePillar(this)">
+          <div class="info-icons1">i</div>
+          <div class="left">
+            <img src="figuren/economy.png" alt="Economy">
+          </div>
+          <div class="right">
+            <strong>ECONOMY AND INFRASTRUCTURE</strong><br>
+            Refers to all areas that secure the material supply and basic technical structure of the society.<br>
+
+          </div>
+        </div>
+        <div class="label">ECONOMY<br>AND INFRASTRUCTURE</div>
+      </div>
+
+      <!-- JUSTICE -->
+      <div class="pillar justice">
+        <div class="core" onclick="togglePillar(this)">
+          <div class="info-icons1">i</div>
+          <div class="left">
+            <img src="figuren/justice.png" alt="Justice">
+          </div>
+          <div class="right">
+            <strong>Justice & Police</strong><br>
+            Describes the governmental system for maintaining law, order and safety.<br>
+
+          </div>
+        </div>
+        <div class="label">JUSTICE<br>AND POLICE</div>
+      </div>
+
+            <!-- SOCIAL CARE -->
+            <div class="pillar socialcare">
+              <div class="core" onclick="togglePillar(this)">
+                <div class="info-icons1">i</div>
+                <div class="left">
+                  <img src="figuren/socialcare.png" alt="Social Care">
+                </div>
+                <div class="right">
+                  <strong>Social Care</strong><br>
+                  Covers all institutions and services that support people in need and enable social participation.<br>
+
+                </div>
+              </div>
+              <div class="label">SOCIAL<br>CARE</div>
+            </div>
+
+      <!-- ECOLOGY -->
+      <div class="pillar ecology">
+        <div class="core" onclick="togglePillar(this)">
+          <div class="info-icons1">i</div>
+          <div class="left">
+            <img src="figuren/ecology.png" alt="Ecology">
+          </div>
+          <div class="right">
+            <strong>Ecology & Environment</strong><br>
+            Includes all activities that promote the preservation of natural resources and sustainable action.<br>
+          </div>
+        </div>
+        <div class="label">ECOLOGY<br>AND ENVIRONMENT</div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="pillar education">
+        <div class="core" onclick="togglePillar(this)">
+          <div class="info-icons1">i</div>
+          <div class="left">
+            <img src="figuren/education.png" alt="Education">
+          </div>
+          <div class="right">
+            <strong>Education & Integration</strong><br>
+            Refers to all institutions responsible for education, further training and social integration.<br>
+          </div>
+        </div>
+        <div class="label">EDUCATION<br>AND INTEGRATION</div>
+      </div>
+
+      <!-- CULTURE -->
+      <div class="pillar culture">
+        <div class="core" onclick="togglePillar(this)">
+          <div class="info-icons1">i</div>
+          <div class="left">
+            <img src="figuren/culture.png" alt="Culture">
+          </div>
+          <div class="right">
+            <strong>Cultural Life & Sports</strong><br>
+            Stands for the preservation and promotion of cultural identity, leisure activities and local community cohesion.<br>
+          </div>
+        </div>
+        <div class="label">CULTURE<br>AND SPORTS</div>
+      </div>
+
+      <!-- RESCUE -->
+      <div class="pillar rescue">
+        <div class="core" onclick="togglePillar(this)">
+          <div class="info-icons1">i</div>
+          <div class="left">
+            <img src="figuren/rescue.png" alt="Rescue">
+          </div>
+          <div class="right">
+            <strong>Disaster Protection & Rescue</strong><br>
+            Describes all organizations that ensure safety and aid in case of accidents, disasters or medical emergencies.<br>
+          </div>
+        </div>
+        <div class="label">CIVIL PROTECTION<br>AND RESCUE</div>
+      </div>
+
+
+    </section>
+    <div class="scroll-indicator">
+      <a href="#collapse-section">
+        <p>SCROLL DOWN</p>
+        <img src="images/pfeil.png" alt="Scroll down arrow">
+      </a>
+    </div>
+</section>
+
+<section class="section-collapse" id="collapse-section">
+  <div class="collapse-wrapper">
+    <div class="text-contents2">
+      <p>Now that we know the pillars we take a look at the influence on the stability of the german society if the volunteers would stop.</p>
+      <div class="button-with-info">
+        <button id="toggleBtn">
+          <span class="text-disappear">LET THEM DISAPPEAR!</span>
+          <span class="text-bring hidden">BRING THEM BACK!</span>
+        </button>
+        
+        <div class="inline-info hidden">
+          <div class="info-icon-small">i</div>
+          <span>Click on the pillars for<br>more informations</span>
+        </div>
+
+        <div id="mode-switcher" class="hidden">
+          <button id="mode-hours">HOURS</button>
+          <button id="mode-persons">PERSONS</button>
+        </div>
+      </div>
+
+
+      
+        <div id="canvas-info-panel" class="info-panel hidden"></div>
+    </div>
+
+<div class="canvas-text-wrapper">
+  <div class="canvas-container">
+    <canvas id="animation"></canvas>
+  </div>
+  <div id="collapse-explanation" class="canvas-side-box hidden">
+    <p>
+  Without volunteers, <strong>we would fall</strong>.<br><br>
+  This visualization shows what happens to our society’s foundation if unpaid support disappears.<br><br>
+  Switch between views to compare both the <strong>working hours</strong> and the <strong>number of involved people</strong> across all pillars. For detailed informations click on the pillars.<br><br>
+  You want to know where the data comes from? - Click down below to learn more about the data!
+</p>
+
+    <a href="#method-explanation" class="jump-button">LEARN MORE ABOUT THE DATA</a>
+  </div>
+</div>
+
+   
+    <div class="pillar-legend">
+      <div class="legend-item"><span class="legend-color economy"></span> Economy</div>
+      <div class="legend-item"><span class="legend-color justice"></span> Justice</div>
+      <div class="legend-item"><span class="legend-color socialcare"></span> Social Care</div>
+      <div class="legend-item"><span class="legend-color ecology"></span> Ecology</div>
+      <div class="legend-item"><span class="legend-color education"></span> Education</div>
+      <div class="legend-item"><span class="legend-color culture"></span> Culture</div>
+      <div class="legend-item"><span class="legend-color rescue"></span> Civil Protection & Rescue</div>
+
+    </div>
+    
+<div class="bottom-button-row">
+  <div class="button-group-left">
+    <a href="start.html" class="nav-button">◀</a>
+    <a href="search.html" class="nav-button">▶</a>
+  </div>
+  <div class="button-group-right">
+    <a href="start.html" class="nav-button">START AGAIN</a>
+    <a href="search.html" class="nav-button">HOW CAN I HELP?</a>
+  </div>
+</div>
+
+
+<section id="method-explanation" class="info-section">
+  <h2> How the percentages were calculated</h2>
+  <p>
+    Most values in this visualization are not directly measured, but estimated using a mix of official data and survey results.
+    Here’s how the numbers were derived:
+  </p>
+
+  <ul>
+    <li> <strong>Volunteer numbers</strong>: Based on the <em>Freiwilligensurvey 2019</em>, 28.8 million people volunteer in Germany. We used reported shares per field (e.g. 14.6% in education) to estimate volunteer numbers by sector. <a href='#ref8'>[8]</a></li>
+
+    <li> <strong>Employee numbers</strong>: Taken from <em>Bundesagentur für Arbeit</em> (April 2025) reports. Sectors like health, education, and public safety where matched. <a href='#ref3'>[3]</a></li>
+
+    <li><strong>Volunteer hours</strong>: Estimated from survey data:<br>
+      • 60% volunteer ~2h/week<br>
+      • 23% volunteer ~4h/week<br>
+      • 17% volunteer ~7h/week<br>
+      → Weighted average: ~3.9 hours/week per volunteer <a href='#ref8'>[8]</a>
+    </li>
+
+    <li> <strong>Employee hours</strong>: Assumed average weekly hours: <br>
+      • 39h in most sectors <a href='#ref7'>[7]</a><br>
+      • 41h in justice/police <a href='#ref6'>[6]</a><br>
+      • 46h in education <a href='#ref4'>[4]</a><br>
+      • 35h in environment/infrastructure <a href='#ref5'>[5]</a>
+    </li>
+
+    <li><strong>Example calculation</strong>:<br>
+      If 4.2 million volunteers work in education and contribute ~3.9h/week, that's 16.38 million hours.<br>
+      If 1.74 million teachers work ~46h/week, that’s 80.04 million hours.<br>
+      → Volunteers = <strong>14.8%</strong> of total hours in education.
+    </li>
+
+    <li><strong>Exception:</strong> Civil protection values (96.6% volunteers, 72.2% of hours) are based on official data from the <em>ZiviZ/BBK Sonderauswertung (2023)</em>. <a href='#ref1'>[1]</a></li>
+  </ul>
+</section>
+
+
+
+
+ 
+    
+    
+
+
+<section id="references">
+  <h2>References</h2>
+  <ol>
+    <li id="ref1">
+      Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK),  
+      <em>Sonderauswertung ZiviZ-Survey: Engagement im Bevölkerungsschutz</em>, 2023.  
+      [Online]. Available:  
+      <a href="https://www.bbk.bund.de/SharedDocs/Downloads/DE/Mediathek/Publikationen/Foerderung-Ehrenamt/sonderauswertung-ziviz_download.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">
+        PDF
+      </a>
+    </li>
+    <li id="ref2">
+  ver.di Fachvorstand Feuerwehr Baden-Württemberg,
+  <em>Wissenswertes für Beamte des feuerwehrtechnischen Dienstes</em>, 2023.
+  [Online]. Available:
+  <a href="https://feuerwehr-bawue.verdi.de/++file++51f53170890e9b136a000522/download/Wissenswertes-fr-Feuerwehrbeamte-in-BaW.pdf" target="_blank" rel="noopener noreferrer">
+    PDF
+  </a>
+</li>
+<li id="ref3">
+  Bundesagentur für Arbeit,
+  <em>Monatsbericht zum Arbeits- und Ausbildungsmarkt, April 2025</em>.
+  [Online]. Available:
+  <a href="https://statistik.arbeitsagentur.de" target="_blank" rel="noopener noreferrer">
+    PDF
+  </a>
+</li>
+<li id="ref4">
+  Deutsches Schulportal,
+  <em>Lehrerarbeitszeit – So viele Stunden arbeiten Lehrerinnen und Lehrer wirklich</em>, 2023.
+  [Online]. Available:
+  <a href="https://deutsches-schulportal.de/bildungswesen/lehrerarbeitszeit-infografik-so-viele-stunden-arbeiten-lehrerinnen-und-lehrer-wirklich/" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref5">
+  Umweltbundesamt,
+  <em>Indikator: Beschäftigte im Umweltschutz</em>, 2024.
+  [Online]. Available:
+  <a href="https://www.umweltbundesamt.de/daten/umweltindikatoren/indikator-beschaeftigte-im-umweltschutz#wie-wird-der-indikator-berechnet" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref6">
+  Ministerium des Innern des Landes Nordrhein-Westfalen,
+  <em>Verordnung über die Arbeitszeit der Beamtinnen und Beamten im Lande Nordrhein-Westfalen (Arbeitszeitverordnung – AZVO)</em>, 2006.
+  [Online]. Available:
+  <a href="https://recht.nrw.de/lmi/owa/br_bes_detail?bes_id=36764&anw_nr=2&det_id=584278" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref7">
+  Statistisches Bundesamt (Destatis),
+  <em>Wöchentliche Arbeitszeit</em>, 2024.
+  [Online]. Available:
+  <a href="https://www.destatis.de/DE/Themen/Arbeit/Arbeitsmarkt/Qualitaet-Arbeit/Dimension-3/woechentliche-arbeitszeitl.html" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref8">
+  Bundesministerium für Familie, Senioren, Frauen und Jugend (BMFSFJ),
+  <em>Freiwilliges Engagement in Deutschland – Zentrale Ergebnisse des Fünften Deutschen Freiwilligensurveys</em>, 2021.
+  [Online]. Available:
+  <a href="https://www.bmfsfj.de/resource/blob/176836/7dffa0b4816c6c652fec8b9eff5450b6/freiwilliges-engagement-in-deutschland-fuenfter-freiwilligensurvey-data.pdf" target="_blank" rel="noopener noreferrer">
+    PDF
+  </a>
+</li>
+
+
+
+
+  </ol>
+</section>
+
+
+</div>
+</section>
+
+
+  </div>
+</div>
+
+<canvas id="world"></canvas>
+<script src="matter.min.js"></script>
+<script src="collapse.js"></script>
+
+</body>
+</html>

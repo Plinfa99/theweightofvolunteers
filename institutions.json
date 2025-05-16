@@ -1,0 +1,330 @@
+[
+  {
+    "cities": [
+      "cologne"
+    ],
+    "hours": [
+      "< 2",
+      "2-5",
+      "5-8",
+      "8+"
+    ],
+    "pillars": [
+      "socialcare",
+      "education",
+      "ecology",
+      "culture"
+    ],
+    "name": "Kölner Freiwilligen Agentur",
+    "link": "https://www.koeln-freiwillig.de/",
+    "description": "The Cologne Volunteer Agency places volunteers in over 400 projects in the city – from reading programs and language support to environmental activities."
+  },
+  {
+    "cities": [
+      "cologne"
+    ],
+    "hours": [
+      "2-5",
+      "5-8"
+    ],
+    "pillars": [
+      "socialcare",
+      "education",
+      "justice"
+    ],
+    "name": "Caritasverband für die Stadt Köln e.V.",
+    "link": "https://www.caritas-koeln.de/",
+    "description": "The Caritas Association offers a variety of volunteering opportunities in areas such as neighborhood aid, family sponsorships, and support for refugees."
+  },
+  {
+    "cities": [
+      "cologne"
+    ],
+    "hours": [
+      "2-5",
+      "5-8",
+      "8+"
+    ],
+    "pillars": [
+      "socialcare",
+      "education",
+      "rescue"
+    ],
+    "name": "Diakonie Michaelshoven",
+    "link": "https://www.diakonie-michaelshoven.de/ehrenamt-in-koeln/ehrenamtlich-engagieren",
+    "description": "Diakonie Michaelshoven offers volunteers opportunities in community assistance, senior companionship, and donation support services."
+  },
+  {
+    "cities": [
+      "cologne"
+    ],
+    "hours": [
+      "2-5",
+      "5-8"
+    ],
+    "pillars": [
+      "socialcare",
+      "education",
+      "culture"
+    ],
+    "name": "AWO Köln – Büro für Bürgerengagement",
+    "link": "https://awo-koeln.de/fuer-mich-andere/ehrenamt-bfb/unser-angebot/",
+    "description": "AWO Cologne connects volunteers with social and cultural projects, including reading mentorships, refugee assistance, and senior care."
+  },
+  {
+    "cities": [
+      "cologne"
+    ],
+    "hours": [
+      "2-5",
+      "5-8"
+    ],
+    "pillars": [
+      "socialcare",
+      "education"
+    ],
+    "name": "Kinderschutzbund Köln",
+    "link": "https://www.kinderschutzbund-koeln.de/foerdern-und-unterstuetzen/ehrenamtliche-mitarbeit/",
+    "description": "The Cologne Child Protection Association enables volunteers to work on youth helplines, family mentoring, and parenting courses."
+  },
+  {
+    "cities": [
+      "düsseldorf"
+    ],
+    "hours": [
+      "< 2",
+      "2-5",
+      "5-8",
+      "8+"
+    ],
+    "pillars": [
+      "socialcare",
+      "education",
+      "justice",
+      "culture",
+      "ecology"
+    ],
+    "name": "Caritas-Freiwilligenagentur impuls",
+    "link": "https://www.caritas-duesseldorf.de/engagement/impuls/",
+    "description": "The Caritas agency connects volunteers to projects in neighborhood support, integration, education, and environmental action."
+  },
+  {
+    "cities": [
+      "düsseldorf"
+    ],
+    "hours": [
+      "2-5",
+      "5-8"
+    ],
+    "pillars": [
+      "socialcare",
+      "education",
+      "culture",
+      "justice"
+    ],
+    "name": "AWO Düsseldorf – Ehrenamtsbörse",
+    "link": "https://www.awo-duesseldorf.de/ueber-uns/aktiv-werden/ehrenamtsboerse/",
+    "description": "AWO Düsseldorf provides various opportunities in social work, education, cultural programs, and integration support."
+  },
+  {
+    "cities": [
+      "düsseldorf"
+    ],
+    "hours": [
+      "2-5",
+      "5-8",
+      "8+"
+    ],
+    "pillars": [
+      "rescue",
+      "socialcare",
+      "justice"
+    ],
+    "name": "DRK Düsseldorf",
+    "link": "https://www.drk-duesseldorf.de/mitgliedspenden/ehrenamt/ehrenamt.html",
+    "description": "The German Red Cross in Düsseldorf enables volunteering in emergency services, social support, and legal assistance."
+  },
+  {
+    "cities": [
+      "düsseldorf"
+    ],
+    "hours": [
+      "< 2",
+      "2-5",
+      "5-8"
+    ],
+    "pillars": [
+      "ecology"
+    ],
+    "name": "NABU Düsseldorf",
+    "link": "https://www.nabu-duesseldorf.de/ehrenamt-einfach-mitmachen/",
+    "description": "NABU Düsseldorf offers environmental volunteering and education projects for nature enthusiasts."
+  },
+  {
+    "cities": [
+      "düsseldorf"
+    ],
+    "hours": [
+      "2-5",
+      "5-8"
+    ],
+    "pillars": [
+      "socialcare",
+      "education",
+      "culture"
+    ],
+    "name": "MachMit – Freiwilligenzentrale der Diakonie Düsseldorf",
+    "link": "https://www.diakonie-duesseldorf.de/ueber-uns/ehrenamt/machmit-die-freiwilligenzentrale",
+    "description": "The MachMit volunteer center connects people with social and cultural engagements including mentoring and support initiatives."
+  },
+  {
+    "cities": [
+      "hamburg"
+    ],
+    "hours": [
+      "< 2",
+      "2-5",
+      "5-8",
+      "8+"
+    ],
+    "pillars": [
+      "socialcare",
+      "education",
+      "ecology",
+      "culture"
+    ],
+    "name": "Freiwillig.hamburg",
+    "link": "https://freiwillig.hamburg/",
+    "description": "Hamburg’s central volunteer portal with over 2,000 opportunities – from neighborhood help and reading mentorships to environmental projects."
+  },
+  {
+    "cities": [
+      "hamburg"
+    ],
+    "hours": [
+      "2-5",
+      "5-8"
+    ],
+    "pillars": [
+      "socialcare",
+      "education",
+      "culture"
+    ],
+    "name": "Freiwilligenagentur mittig engagiert",
+    "link": "https://mittig-engagiert.de/",
+    "description": "This agency places volunteers in education, culture, and social projects across central Hamburg."
+  },
+  {
+    "cities": [
+      "hamburg"
+    ],
+    "hours": [
+      "2-5",
+      "5-8"
+    ],
+    "pillars": [
+      "ecology",
+      "education"
+    ],
+    "name": "NABU Hamburg",
+    "link": "https://hamburg.nabu.de/spenden-und-mitmachen/jobboerse-ehrenamt/index.html",
+    "description": "NABU Hamburg focuses on conservation work and environmental education with a variety of volunteer activities."
+  },
+  {
+    "cities": [
+      "hamburg"
+    ],
+    "hours": [
+      "2-5",
+      "5-8"
+    ],
+    "pillars": [
+      "socialcare",
+      "education",
+      "culture"
+    ],
+    "name": "Freiwilligenagentur Hamburg-Bergedorf",
+    "link": "https://www.freiwilligen-agentur-bergedorf.de/",
+    "description": "This agency coordinates volunteers in district-based education, culture, and community support projects."
+  },
+  {
+    "cities": [
+      "hamburg"
+    ],
+    "hours": [
+      "2-5",
+      "5-8"
+    ],
+    "pillars": [
+      "ecology",
+      "education"
+    ],
+    "name": "BUND Hamburg",
+    "link": "https://www.bund-hamburg.de/mitmachen/",
+    "description": "BUND Hamburg offers opportunities in environmental protection and nature-based education programs."
+  },
+    {
+    "cities": ["berlin"],
+    "hours": ["< 2", "2-5", "5-8", "8+"],
+    "pillars": ["socialcare", "education", "culture", "justice"],
+    "name": "Landesfreiwilligenagentur Berlin",
+    "link": "https://landesfreiwilligenagentur.berlin/",
+    "description": "The Landesfreiwilligenagentur Berlin serves as a central hub for volunteer engagement in Berlin, offering consultation, training, and support for volunteers and organizations across various social and cultural projects."
+  },
+  {
+    "cities": ["berlin"],
+    "hours": ["2-5", "5-8"],
+    "pillars": ["socialcare", "education", "culture"],
+    "name": "FreiwilligenAgentur Mitte",
+    "link": "https://freiwilligenagentur-mitte.de/",
+    "description": "FreiwilligenAgentur Mitte connects volunteers with opportunities in Berlin's central district, focusing on social support, education, and cultural initiatives."
+  },
+  {
+    "cities": ["berlin"],
+    "hours": ["2-5", "5-8"],
+    "pillars": ["socialcare", "education", "culture"],
+    "name": "Freiwilligenagentur Marzahn-Hellersdorf",
+    "link": "https://aller-ehren-wert.de/",
+    "description": "This agency supports volunteers and organizations in the Marzahn-Hellersdorf district, facilitating engagement in social, educational, and cultural projects."
+  },
+  {
+    "cities": ["berlin"],
+    "hours": ["2-5", "5-8"],
+    "pillars": ["socialcare", "education", "culture"],
+    "name": "Freiwilligenagentur Steglitz-Zehlendorf",
+    "link": "https://freiwilligenagentur.info/",
+    "description": "The Steglitz-Zehlendorf volunteer agency offers guidance and placement for individuals seeking to engage in community service, education, and cultural activities in the district."
+  },
+    {
+    "cities": ["munich"],
+    "hours": ["< 2", "2-5", "5-8", "8+"],
+    "pillars": ["socialcare", "education", "culture"],
+    "name": "Freiwilligen-Agentur Tatendrang",
+    "link": "https://tatendrang.de/",
+    "description": "Tatendrang connects volunteers with over 400 organizations in Munich, offering opportunities in social care, education, and cultural projects, along with personalized consultation and training."
+  },
+  {
+    "cities": ["munich"],
+    "hours": ["2-5", "5-8"],
+    "pillars": ["socialcare", "education"],
+    "name": "Z'sam – Zentrum für freiwilliges Engagement",
+    "link": "https://z-sam.de/",
+    "description": "Z'sam serves as a center for voluntary engagement in Munich, providing support and matching volunteers with social and educational initiatives."
+  },
+  {
+    "cities": ["munich"],
+    "hours": ["2-5", "5-8"],
+    "pillars": ["socialcare", "education", "culture"],
+    "name": "Freiwilligen-Zentren München",
+    "link": "https://www.freiwilligenzentren-muenchen.de/",
+    "description": "The Freiwilligen-Zentren München offer local consultation and placement services for volunteers across various districts, focusing on family, youth, education, and cultural projects."
+  },
+  {
+    "cities": ["munich"],
+    "hours": ["2-5", "5-8"],
+    "pillars": ["socialcare", "education"],
+    "name": "Stiftung Gute Tat",
+    "link": "https://www.gute-tat.de/helfen/ehrenamtliches-engagement/projekte-muenchen/",
+    "description": "Stiftung Gute Tat facilitates volunteer engagement in Munich, offering a variety of short-term and flexible opportunities in social care and education."
+  }
+]
