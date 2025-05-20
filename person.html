@@ -1,0 +1,672 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Die Säulen des Alltags</title>
+    <link rel="stylesheet" href="styles4.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f6f7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1, h2 {
+      margin-top: 0rem;
+
+    }
+    .container {
+      width: 100%;
+      max-width: 1280px;
+ 
+    }
+.layout {
+  width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* ← WICHTIG: vertikale Stapelung */
+  gap: 2rem;
+  align-items: center; /* optional: zentriert beides */
+}
+
+
+    form {
+      background: #f4f6f7;
+      padding: 0;
+      border-radius: 10px;
+      width: 94%;
+      margin-left: 20px;
+      margin-bottom: 0px;
+    }
+
+  
+    form label {
+      display: block;
+      margin-top: 0.8rem;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.4rem;
+      margin-top: 0.2rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: 'Poppins', sans-serif;
+    }
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+.animation-block {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0px; /* ✅ positiver Abstand */
+}
+
+
+
+
+
+    canvas {
+      background: #f4f6f7;
+      border-radius: 8px;
+
+    }
+    button {
+      margin: 1rem 0.5rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+    <script src="collapse.js"></script>
+  <div class="container">
+        <section class="wave-header">
+      <div class="wave-top"></div>
+      <div class="title-wrapper">
+        <h1 class="outline">OK, I KNOW IT IS IMPORTANT...</h1>
+        <h1 class="outline">... BUT ALSO FOR ME?</h1>
+      </div>
+    </section>
+    <section class="full-screen" id="section-1">
+    <div class="text-content">
+      <p>Our social life is based on differnt pillars than the society.<br></p>
+      <p>
+        <strong>Let us take a closer look:</strong>
+        There are some pillars that are necessary for our personal stability. Others have more impact on our mental load and stability.<br>
+      </p>
+    </div>
+
+    <section class="pillars">
+      <!-- ECONOMY -->
+      <div class="pillar economy">
+        <div class="core" onclick="togglePillar(this)">
+          <div class="info-icons1">i</div>
+          <div class="left">
+            <img src="figuren/finance.png" alt="Economy">
+          </div>
+          <div class="right">
+            <strong>Finance / Everyday Life</strong><br>
+            Includes financial counseling, food distribution, and other practical everyday support. <br>
+
+          </div>
+        </div>
+        <div class="label">FINANCE<br>AND EVERYDAY LIFE</div>
+      </div>
+
+      <!-- JUSTICE -->
+      <div class="pillar justice">
+        <div class="core" onclick="togglePillar(this)">
+          <div class="info-icons1">i</div>
+          <div class="left">
+            <img src="figuren/socialint.png" alt="Justice">
+          </div>
+          <div class="right">
+            <strong>Social Interaction</strong><br>
+            Captures opportunities for social exchange – clubs, group activities, community events. <br>
+
+          </div>
+        </div>
+        <div class="label">SOCIAL INTERACTION</div>
+      </div>
+
+            <!-- SOCIAL CARE -->
+            <div class="pillar socialcare">
+              <div class="core" onclick="togglePillar(this)">
+                <div class="info-icons1">i</div>
+                <div class="left">
+                  <img src="figuren/mental.png" alt="Social Care">
+                </div>
+                <div class="right">
+                  <strong>Mental Health</strong><br>
+                  Reflects personal emotional support, mental health care, or simply having someone to talk to. <br>
+
+                </div>
+              </div>
+              <div class="label">MENTAL HEALTH</div>
+            </div>
+
+    
+
+      <!-- CULTURE -->
+      <div class="pillar culture">
+        <div class="core" onclick="togglePillar(this)">
+          <div class="info-icons1">i</div>
+          <div class="left">
+            <img src="figuren/self.png" alt="Culture">
+          </div>
+          <div class="right">
+            <strong>Self-Actualisation</strong><br>
+            Involves opportunities for personal growth, creativity, and purposeful work.<br>
+          </div>
+        </div>
+        <div class="label">SELF-ACTUALIZATION</div>
+      </div>
+
+      <!-- RESCUE -->
+      <div class="pillar rescue">
+        <div class="core" onclick="togglePillar(this)">
+          <div class="info-icons1">i</div>
+          <div class="left">
+            <img src="figuren/health.png" alt="Rescue">
+          </div>
+          <div class="right">
+            <strong>Health and Care</strong><br>
+            Represents access to basic physical and medical support services, such as elderly care or regular healthcare visits. <br>
+          </div>
+        </div>
+        <div class="label">HEALTH AND CARE</div>
+      </div>
+
+
+    </section>
+    <div class="scroll-indicator">
+      <a href="#text">
+        <p>SCROLL DOWN</p>
+        <img src="images/pfeil.png" alt="Scroll down arrow">
+      </a>
+    </div>
+</section>
+    <div class="layout">
+
+            <div class="text-content2" id="text">
+      <p>To do some realistic estimations on how your life would be affected please answer these questions:
+      </p>
+    </div>
+<form id="userForm">
+
+  <div class="question-block">
+    <label><strong>What is your Occupation:</strong>
+      <select name="job">
+        <option value="default1">Select a Occupation</option>
+        <option value="student">Student</option>
+        <option value="professor">Professor</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="question-block">
+    <label><strong>Hometown:</strong>
+      <select name="hometown">
+        <option value="default">Select a city</option>
+        <option value="Köln">Köln</option>
+        <option value="Düsseldorf">Düsseldorf</option>
+        <option value="Hamburg">Hamburg</option>
+        <option value="München">München</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="question-block">
+    <label><strong>Do you have elderly relatives?</strong></label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" class="yn-toggle" id="elderlyYes" data-group="elderly" onclick="handleElderlyCheckbox('yes')"> Yes</label>
+      <label><input type="checkbox" class="yn-toggle" id="elderlyNo" data-group="elderly" onclick="handleElderlyCheckbox('no')"> No</label>
+    </div>
+    <div id="elderlyFollowup" style="display:none;">
+      <label>In a nursing home?</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" class="yn-toggle" id="inHomeYes" name="inHome" data-group="inHome" onclick="handleInHomeCheckbox('yes')"> Yes</label>
+        <label><input type="checkbox" class="yn-toggle" id="inHomeNo" name="inHome" data-group="inHome" onclick="handleInHomeCheckbox('no')"> No</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <label><strong>Do you have children?</strong></label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" class="yn-toggle" id="childrenYes" data-group="children" onclick="handleChildrenCheckbox('yes')"> Yes</label>
+      <label><input type="checkbox" class="yn-toggle" id="childrenNo" data-group="children" onclick="handleChildrenCheckbox('no')"> No</label>
+    </div>
+    <div id="childrenFollowup" style="display:none;">
+      <label>Number: <input type="number" id="childrenCount" value="0" /></label>
+      <label>How many attend daycare/kindergarten? <input type="number" name="childrenInKita" /></label>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <label><strong>What are your hobbies?</strong></label>
+    <div class="checkbox-group" style="display: flex; flex-wrap: wrap; gap: 1rem;">
+  <label><input type="checkbox" name="hobbies" value="Gardening"> Gardening</label>
+  <label><input type="checkbox" name="hobbies" value="Shopping"> Shopping</label>
+  <label><input type="checkbox" name="hobbies" value="Photography"> Photography</label>
+  <label><input type="checkbox" name="hobbies" value="Dining"> Dining out</label>
+  <label><input type="checkbox" name="hobbies" value="Gaming"> Video games</label>
+  <label><input type="checkbox" name="hobbies" value="Puzzles"> Solving puzzles</label>
+  <label><input type="checkbox" name="hobbies" value="Fitness"> Going to the gym</label>
+  <label><input type="checkbox" name="hobbies" value="Hiking"> Hiking</label>
+  <label><input type="checkbox" name="hobbies" value="DIY"> DIY/home repair</label>
+  <label><input type="checkbox" name="hobbies" value="BoardGames"> Board games</label>
+  <label><input type="checkbox" name="hobbies" value="none"> No Hobbies</label>
+
+    </div>
+  </div>
+
+  <div class="question-block">
+    <label><strong>Do you regularly attend events?</strong></label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" class="yn-toggle" data-group="events" id="eventsYes" onclick="handleEventsCheckbox('yes')"> Yes</label>
+      <label><input type="checkbox" class="yn-toggle" data-group="events" id="eventsNo" onclick="handleEventsCheckbox('no')"> No</label>
+    </div>
+<div id="eventsFollowup" style="display:none;">
+  <label><strong>How often?</strong></label>
+  <div class="checkbox-group">
+    <label><input type="checkbox" name="eventFrequency" value="daily" onclick="selectOnlyOne(this)"> Daily</label>
+    <label><input type="checkbox" name="eventFrequency" value="weekly" onclick="selectOnlyOne(this)"> Weekly</label>
+    <label><input type="checkbox" name="eventFrequency" value="monthly" onclick="selectOnlyOne(this)"> Monthly</label>
+  </div>
+</div>
+
+  </div>
+
+  <div class="question-block">
+    <label><strong>Do you regularly attend free workshops, courses or cultural activities (e.g., language cafés)?
+</strong></label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" class="yn-toggle" id="bildungYes" data-group="bildung"> Yes</label>
+      <label><input type="checkbox" class="yn-toggle" id="bildungNo" data-group="bildung"> No</label>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <label><strong>Do you regularly have access to support groups or open talks?</strong></label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" class="yn-toggle" id="mentalSupportYes" data-group="mentalSupport"> Yes</label>
+      <label><input type="checkbox" class="yn-toggle"  id="mentalSupportNo" data-group="mentalSupport"> No</label>
+    </div>
+  </div>
+
+  <div class="question-block">
+    <label><strong>Do you regularly take part in a club, student group or community activity?
+</strong></label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" class="yn-toggle" id="socialGroupYes" data-group="socialGroup"> Yes</label>
+      <label><input type="checkbox" class="yn-toggle" id="socialGroupNo" data-group="socialGroup"> No</label>
+    </div>
+    
+  </div>
+    </section>
+    <div class="scroll-indicator2">
+      <a href="#animation">
+        <p>SHOW ME MY RESULTS</p>
+        <img src="images/pfeil.png" alt="Scroll down arrow">
+      </a>
+    </div>
+</section>
+
+
+
+</form>
+
+      <div class="animation-block">
+        <canvas id="animation" ></canvas>
+        <div>
+<button id="toggleCollapse">LET THEM DISAPPEAR!</button>
+
+        </div>
+            <div class="pillar-legend">
+      <div class="legend-item"><span class="legend-color economy"></span> Finance & Everyday Life</div>
+      <div class="legend-item"><span class="legend-color justice"></span> Social Interaction</div>
+      <div class="legend-item"><span class="legend-color socialcare"></span> Mental Health</div>
+      <div class="legend-item"><span class="legend-color culture"></span> Self-Actualization</div>
+      <div class="legend-item"><span class="legend-color rescue"></span> Health & Care</div>
+
+    </div>
+      </div>
+<div id="explanationContainer" style="display: flex; align-items: flex-start; gap: 1.5rem; margin-top: 2rem;">
+  <div id="explanationVisual" style="flex-shrink: 0;"></div>
+<div id="explanationBox" style="font-size: 16px; font-family: 'Poppins', sans-serif; line-height: 1.6;max-width: 850px;"></div>
+
+</div>
+
+    </div>
+           <div class="title-wrapper">
+      <div class="container">
+    <div class="bottom-button-row">
+  <div class="button-group-left">
+    <a href="start.html" class="nav-button">◀</a>
+    <a href="search.html" class="nav-button">▶</a>
+  </div>
+  <div class="button-group-right">
+    <a href="start.html" class="nav-button">START AGAIN</a>
+    <a href="search.html" class="nav-button">HOW CAN I HELP?</a>
+  </div>
+</div>
+
+<section id="references">
+  <h2>References</h2>
+  <ol>
+    <li id="ref1">
+      Bundesamt für Bevölkerungsschutz und Katastrophenhilfe (BBK),  
+      <em>Sonderauswertung ZiviZ-Survey: Engagement im Bevölkerungsschutz</em>, 2023.  
+      [Online]. Available:  
+      <a href="https://www.bbk.bund.de/SharedDocs/Downloads/DE/Mediathek/Publikationen/Foerderung-Ehrenamt/sonderauswertung-ziviz_download.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer">
+        PDF
+      </a>
+    </li>
+    <li id="ref2">
+  ver.di Fachvorstand Feuerwehr Baden-Württemberg,
+  <em>Wissenswertes für Beamte des feuerwehrtechnischen Dienstes</em>, 2023.
+  [Online]. Available:
+  <a href="https://feuerwehr-bawue.verdi.de/++file++51f53170890e9b136a000522/download/Wissenswertes-fr-Feuerwehrbeamte-in-BaW.pdf" target="_blank" rel="noopener noreferrer">
+    PDF
+  </a>
+</li>
+<li id="ref3">
+  Bundesagentur für Arbeit,
+  <em>Monatsbericht zum Arbeits- und Ausbildungsmarkt, April 2025</em>.
+  [Online]. Available:
+  <a href="https://statistik.arbeitsagentur.de" target="_blank" rel="noopener noreferrer">
+    PDF
+  </a>
+</li>
+<li id="ref4">
+  Deutsches Schulportal,
+  <em>Lehrerarbeitszeit – So viele Stunden arbeiten Lehrerinnen und Lehrer wirklich</em>, 2023.
+  [Online]. Available:
+  <a href="https://deutsches-schulportal.de/bildungswesen/lehrerarbeitszeit-infografik-so-viele-stunden-arbeiten-lehrerinnen-und-lehrer-wirklich/" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref5">
+  Umweltbundesamt,
+  <em>Indikator: Beschäftigte im Umweltschutz</em>, 2024.
+  [Online]. Available:
+  <a href="https://www.umweltbundesamt.de/daten/umweltindikatoren/indikator-beschaeftigte-im-umweltschutz#wie-wird-der-indikator-berechnet" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref6">
+  Ministerium des Innern des Landes Nordrhein-Westfalen,
+  <em>Verordnung über die Arbeitszeit der Beamtinnen und Beamten im Lande Nordrhein-Westfalen (Arbeitszeitverordnung – AZVO)</em>, 2006.
+  [Online]. Available:
+  <a href="https://recht.nrw.de/lmi/owa/br_bes_detail?bes_id=36764&anw_nr=2&det_id=584278" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref7">
+  Statistisches Bundesamt (Destatis),
+  <em>Wöchentliche Arbeitszeit</em>, 2024.
+  [Online]. Available:
+  <a href="https://www.destatis.de/DE/Themen/Arbeit/Arbeitsmarkt/Qualitaet-Arbeit/Dimension-3/woechentliche-arbeitszeitl.html" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref8">
+  Bundesministerium für Familie, Senioren, Frauen und Jugend (BMFSFJ),
+  <em>Freiwilliges Engagement in Deutschland – Zentrale Ergebnisse des Fünften Deutschen Freiwilligensurveys</em>, 2021.
+  [Online]. Available:
+  <a href="https://www.bmfsfj.de/resource/blob/176836/7dffa0b4816c6c652fec8b9eff5450b6/freiwilliges-engagement-in-deutschland-fuenfter-freiwilligensurvey-data.pdf" target="_blank" rel="noopener noreferrer">
+    PDF
+  </a>
+</li>
+<li id="ref9">
+  Bundesministerium des Innern und für Heimat (BMI),
+  <em>Deine Gesellschaft zählt: Ehrenamt in Deutschland</em>, 2023.
+  [Online]. Available:
+  <a href="https://www.bmi.bund.de/DE/themen/heimat-integration/buergerschaftliches-engagement/deine-gesellschaft-zaehlt/deine-gesellschaft-zaehlt-node.html" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref10">
+  ZDFheute,
+  <em>Ehrenamt: Wo sich die Deutschen engagieren</em>, 2023.
+  [Online]. Available:
+  <a href="https://www.zdf.de/nachrichten/panorama/ehrenamt-deutschland-grafiken-100.html" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref11">
+  Statistisches Bundesamt (Destatis),
+  <em>Pflege: Pflegebedürftige in Deutschland</em>, 2023.
+  [Online]. Available:
+  <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Gesundheit/Pflege/_inhalt.html" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref12">
+  Stiftung Zentrum für Qualität in der Pflege (ZQP),
+  <em>Angehörige</em>, 2023.
+  [Online]. Available:
+  <a href="https://www.zqp.de/schwerpunkt/pflegende-angehoerige/" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref13">
+  Statistisches Bundesamt (Destatis),
+  <em>Kindertagesbetreuung in Deutschland</em>, 2024.
+  [Online]. Available:
+  <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Soziales/Kindertagesbetreuung/_inhalt.html" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref14">
+  Statistikportal.de,
+  <em>Kindertagesbetreuung in Deutschland</em>, 2023.
+  [Online]. Available:
+  <a href="https://www.statistikportal.de/de/kindertagesbetreuung-deutschland" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref31">
+  Statistisches Bundesamt (Destatis),
+  <em>Statistik der Studierenden – Wintersemester 2023/2024</em>, 2024.
+  [Online]. Available:
+  <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bildung-Forschung-Kultur/Hochschulen/Publikationen/Downloads-Hochschulen/statistischer-bericht-studierende-hochschulen-endg-2110410247005.html" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref32">
+  Deutsches Zentrum für Hochschul- und Wissenschaftsforschung (DZHW),
+  <em>22. Sozialerhebung</em>, 2022.
+  [Online]. Available:
+  <a href="https://www.dzhw.eu/pdf/ab_20/Soz22_Hauptbericht.pdf" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref33">
+  Statistisches Bundesamt (Destatis),
+  <em>Hochschulpersonal – Pressemitteilung Nr. 348 vom 13. September 2024</em>, 2024.
+  [Online]. Available:
+  <a href="https://www.destatis.de/DE/Presse/Pressemitteilungen/2024/09/PD24_348_213.html" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref36">
+  Deutsches Zentrum für Hochschul- und Wissenschaftsforschung (DZHW),
+  <em>22. Sozialerhebung – Teilhabe an sozialen und kulturellen Angeboten</em>, 2022.
+  [Online]. Available:
+  <a href="https://www.dzhw.eu/pdf/ab_20/Soz22_Hauptbericht.pdf" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref37">
+  Universität Hamburg,
+  <em>PIASTA-Konzept – Interkulturelles Leben & Ehrenamt an Hochschulen</em>, 2025.
+  [Online]. Available:
+  <a href="https://www.uni-hamburg.de/piasta/ueber-uns/doc-4-_Konzept_/piasta-konzept.pdf" target="_blank" rel="noopener noreferrer">
+    PDF
+  </a>
+</li>
+<li id="ref38">
+  Universität Hamburg,
+  <em>Jahresbericht PIASTA 2016 – Ehrenamtliche Organisation kultureller Aktivitäten</em>.
+  [Online]. Available:
+  <a href="https://www.uni-hamburg.de/piasta/ueber-uns/doc3/jahresbericht-2016.pdf" target="_blank" rel="noopener noreferrer">
+    PDF
+  </a>
+</li>
+<li id="ref39">
+  Philipps-Universität Marburg,
+  <em>Support Groups</em>.
+  [Online]. Available:
+  <a href="https://www.uni-marburg.de/en/studying/services/mental-health/support-groups" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref40">
+  Ludwig-Maximilians-Universität München,
+  <em>Peer support: Engaging more actively as a student</em>.
+  [Online]. Available:
+  <a href="https://www.lmu.de/en/workspace-for-students/student-support-services/peer-support/" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref39">
+  Erasmus Student Network Deutschland,
+  <em>ESN Deutschland</em>.
+  [Online]. Available:
+  <a href="https://de.wikipedia.org/wiki/Erasmus_Student_Network_Deutschland" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref40">
+  Technische Universität München,
+  <em>TUM Student Clubs</em>.
+  [Online]. Available:
+  <a href="https://www.tum.de/en/community/campus-life/student-clubs" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref41">
+  DEGIS gGmbH,
+  <em>Become a Volunteer</em>.
+  [Online]. Available:
+  <a href="https://degis.info/become-active/become-a-volunteer/" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+
+<li id="ref43">
+  Bundesministerium für Familie, Senioren, Frauen und Jugend (BMFSFJ),<br>
+  <em>Fachkräftebericht Kindertagesbetreuung 2024</em>.<br>
+  [Online]. Available:
+  <a href="https://www.bmfsfj.de/kita-fachkraeftebericht" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+<li id="ref44">
+  AWO Bundesverband,<br>
+  <em>Elternmitwirkung in Kitas – Ehrenamtliche Elternarbeit</em>, 2022.<br>
+  [Online]. Available:
+  <a href="https://www.awo.org/elternmitwirkung-kita-ehrenamt" target="_blank" rel="noopener noreferrer">
+    Article
+  </a>
+</li>
+
+
+
+  </ol>
+</section>
+  </div>
+  </div>
+</div>
+
+  <script>
+      window.addEventListener("DOMContentLoaded", () => {
+    // Setze alle Ja/Nein-Fragen standardmäßig auf "No"
+    const yesNoGroups = ["elderly", "inHome", "children", "events", "bildung", "mentalSupport", "socialGroup"];
+    yesNoGroups.forEach(group => {
+      const noBox = document.querySelector(`.yn-toggle[data-group="${group}"][id$="No"]`);
+      if (noBox) noBox.checked = true;
+    });
+
+    // Setze "No Hobbies" Checkbox aktiv
+    const noHobbyBox = document.querySelector(`input[name="hobbies"][value="none"]`);
+    if (noHobbyBox) noHobbyBox.checked = true;
+  });
+    function handleElderlyCheckbox(value) {
+      const yes = document.getElementById("elderlyYes");
+      const no = document.getElementById("elderlyNo");
+      const followup = document.getElementById("elderlyFollowup");
+      if (value === 'yes') {
+        if (yes.checked) {
+          no.checked = false;
+          followup.style.display = 'block';
+        } else {
+          followup.style.display = 'none';
+        }
+      } else {
+        if (no.checked) {
+          yes.checked = false;
+          followup.style.display = 'none';
+        }
+      }
+    }
+      function handleInHomeCheckbox(value) {
+    const yes = document.getElementById("inHomeYes");
+    const no = document.getElementById("inHomeNo");
+    if (value === 'yes') {
+      if (yes.checked) no.checked = false;
+    } else {
+      if (no.checked) yes.checked = false;
+    }
+  }
+
+    function handleChildrenCheckbox(value) {
+      const yes = document.getElementById("childrenYes");
+      const no = document.getElementById("childrenNo");
+      const followup = document.getElementById("childrenFollowup");
+      if (value === 'yes') {
+        if (yes.checked) {
+          no.checked = false;
+          followup.style.display = 'block';
+        } else {
+          followup.style.display = 'none';
+        }
+      } else {
+        if (no.checked) {
+          yes.checked = false;
+          followup.style.display = 'none';
+        }
+      }
+    }
+
+  document.getElementById("showResultsBtn").addEventListener("click", () => {
+    document.getElementById("animation").scrollIntoView({ behavior: "smooth" });
+  });
+
+
+  </script>
+      <script src="matter.min.js"></script>
+  <script src="script3.js"></script>
+</body>
+</html>
