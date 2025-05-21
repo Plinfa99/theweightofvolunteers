@@ -84,6 +84,7 @@ margin-bottom: 0;
 
 
 
+
 .text-content p {
   margin-bottom: 0;
   opacity: 0;
@@ -309,7 +310,7 @@ margin-top: 200px;
 
 .results-button {
   background-color: #f4f6f7;
-  color: white;
+  color: #f4f6f7;
   transition: background-color 0.3s ease;
 }
 
@@ -1034,6 +1035,7 @@ a {
 margin-left: 150px;
   max-width: 200px;
   position: relative;
+
 }
 
 #city-input {
@@ -1235,4 +1237,46 @@ text-align: left;
 .results-table td:nth-child(4) {
   width: 200px; /* Website */
   word-break: break-all; /* lange URLs umbrechen */
+}
+
+.fade-block {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.city-selector {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 5.5s; /* Zeit nach Start der Seite */
+}
+.time-selector {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 6.5s; /* Zeit nach Start der Seite */
+}
+.pillars {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 7.5s; /* Zeit nach Start der Seite */
+}
+.text-contentq {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 7.5s; /* Zeit nach Start der Seite */
 }
