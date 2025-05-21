@@ -177,13 +177,13 @@ function updateBars(values) {
     const rightLoad = bars[3].bounds.max.y - bars[3].bounds.min.y;
 
     let mood = "neutral";
-    if (psychHeight > 160) mood = "happy";
-    else if (psychHeight < 80) mood = "sad";
+    if (psychHeight > 170) mood = "happy";
+    else if (psychHeight < 150) mood = "sad";
 
     let load = "";
-    if (leftLoad < rightLoad - 10) load = "leftweight";
-    else if (rightLoad < leftLoad - 10) load = "rightweight";
-    else if (rightLoad < 0.8 && leftLoad < 0.8) load = "bothweights";
+    if (leftLoad < rightLoad - 5) load = "leftweight";
+    else if (rightLoad < leftLoad - 5) load = "rightweight";
+    else if (rightLoad < 0.95 && leftLoad < 0.95) load = "bothweights";
 
     const key = load ? `${load}${mood !== "neutral" ? "_" + mood : ""}` : mood;
     const img = images[key] || images.neutral;
@@ -256,32 +256,32 @@ const childrenInKita = parseInt(form.childrenInKita?.value || 0);
   if (socialGroup) pillarValues.social -= 10;
 
   // Familie
-if (elderly) {
+if (elderly && !inHome) {
   const isStudent = job === "student";
 
-  const careModifiers = isStudent
+  const institutionalCareModifiers = isStudent
     ? {
-        finance: 4,
-        social: 6,
-        mental: 8,
-        self: 5,
-        health: 3
+        finance: 3, // erhöhte Belastung durch externe Besuchswege oder fehlende Unterstützung
+        social: 5,  // Ehrenamtliche entfallen als Kontaktbrücke
+        mental: 6,  // emotionale Stabilität beeinträchtigt
+        self: 4,
+        health: 2
       }
     : {
         finance: 2,
         social: 4,
-        mental: 7,
-        self: 6,
-        health: 4
+        mental: 5,
+        self: 3,
+        health: 2
       };
 
-  // Werte anwenden
-  for (const key in careModifiers) {
+  for (const key in institutionalCareModifiers) {
     if (pillarValues.hasOwnProperty(key)) {
-      pillarValues[key] -= careModifiers[key];
+      pillarValues[key] -= institutionalCareModifiers[key];
     }
   }
 }
+
 
 
 
@@ -325,20 +325,8 @@ if (eventFrequency) {
   const isStudent = job === "student";
 
   const eventModifiers = isStudent
-    ? {
-        finance: 2,
-        social: 6,
-        mental: 5,
-        self: 4,
-        health: 2
-      }
-    : {
-        finance: 1,
-        social: 4,
-        mental: 4,
-        self: 3,
-        health: 1
-      };
+    ? { finance: 1, social: 4, mental: 3, self: 3, health: 1 }
+    : { finance: 0, social: 2, mental: 2, self: 1, health: 0 };
 
   // Häufigkeit: Gewichtungsfaktor setzen
   const frequencyFactors = {
@@ -364,20 +352,8 @@ if (attendsWorkshops) {
   const isStudent = job === "student";
 
   const workshopModifiers = isStudent
-    ? {
-        finance: 2,
-        social: 5,
-        mental: 6,
-        self: 5,
-        health: 2
-      }
-    : {
-        finance: 1,
-        social: 3,
-        mental: 4,
-        self: 3,
-        health: 1
-      };
+    ? { finance: 1, social: 3, mental: 3, self: 4, health: 0 }
+    : { finance: 0, social: 1, mental: 1, self: 1, health: 0 };
 
   for (const key in workshopModifiers) {
     if (pillarValues.hasOwnProperty(key)) {
@@ -390,20 +366,8 @@ if (mentalSupport) {
   const isStudent = job === "student";
 
   const supportGroupModifiers = isStudent
-    ? {
-        finance: 2,
-        social: 5,
-        mental: 7,
-        self: 5,
-        health: 3
-      }
-    : {
-        finance: 1,
-        social: 3,
-        mental: 4,
-        self: 3,
-        health: 1
-      };
+    ? { finance: 1, social: 3, mental: 5, self: 4, health: 2 }
+    : { finance: 0, social: 2, mental: 3, self: 2, health: 1 };
 
   // Werte anwenden
   for (const key in supportGroupModifiers) {
@@ -417,20 +381,8 @@ if (socialGroup) {
   const isStudent = job === "student";
 
   const clubModifiers = isStudent
-    ? {
-        finance: 2,
-        social: 6,
-        mental: 5,
-        self: 4,
-        health: 2
-      }
-    : {
-        finance: 1,
-        social: 3,
-        mental: 3,
-        self: 2,
-        health: 1
-      };
+    ? { finance: 1, social: 5, mental: 4, self: 3, health: 1 }
+    : { finance: 0, social: 2, mental: 2, self: 1, health: 0 };
 
   // Werte anwenden
   for (const key in clubModifiers) {
@@ -478,6 +430,39 @@ const cityModifiers = {
     health: 5
   }
 };
+
+if (hobbies.length > 0 && !hobbies.includes("none")) {
+  const isStudent = job === "student";
+
+  const hobbyModifiersMap = {
+    Choir: isStudent
+      ? { finance: 1, social: 5, mental: 4, self: 3, health: 1 }
+      : { finance: 0, social: 3, mental: 2, self: 1, health: 0 },
+
+    Theater: isStudent
+      ? { finance: 1, social: 4, mental: 3, self: 3, health: 1 }
+      : { finance: 0, social: 2, mental: 2, self: 1, health: 0 },
+
+    Yoga: isStudent
+      ? { finance: 1, social: 1, mental: 2, self: 2, health: 1 }
+      : { finance: 0, social: 1, mental: 1, self: 1, health: 0 },
+
+    Gym:       { finance: 0, social: 0, mental: 0, self: 0, health: 0 }, // kommerziell
+    "No Hobbies": { finance: 0, social: 0, mental: 0, self: 0, health: 0 }
+  };
+
+  // Alle ausgewählten Hobbys durchgehen
+  hobbies.forEach(hobby => {
+    const mod = hobbyModifiersMap[hobby];
+    if (mod) {
+      for (const key in mod) {
+        if (pillarValues.hasOwnProperty(key)) {
+          pillarValues[key] -= mod[key];
+        }
+      }
+    }
+  });
+}
 
 
   const mod = cityModifiers[hometown];
@@ -632,37 +617,40 @@ function generateExplanation(pillarScores, input) {
   // 👵 Pflege
   if (!input.elderly) {
     details.push("No elderly relatives meant less care-related dependency.");
-  } else if (!input.inHome) {
-    details.push("You have elderly relatives, but they don't live in your home — this limited the overall impact <a href='#ref12'>[12]</a>.");
-  } else {
+  }  else if (!input.inHome) {
+  details.push("You have elderly relatives in external care facilities. While core medical care remains intact, many everyday activities such as social interaction, emotional companionship or cultural offers are often enabled by volunteers. Without them, your relatives would face increased isolation — and you would likely be more involved yourself <a href='#ref56'>[56]</a>.");
+}
+ else {
     details.push("You care for elderly relatives at home — which raises health and self-care pressures significantly <a href='#ref12'>[12]</a>.");
   }
 
   // 📅 Events
   if (input.eventFrequency) {
-    details.push("Regular event attendance offered emotional and social stability <a href='#ref36'>[36]</a>.");
+    details.push("Regular event attendance offered emotional and social stability. Many of these free activities rely on volunteer coordination — without which access and variety would drop significantly <a href='#ref36'>[36]</a>.");
   } else {
     details.push("Lack of regular event participation reduced opportunities for emotional balance and social interaction <a href='#ref36'>[36]</a>.");
   }
 
-  // 💬 Support
+  // 💬 Mental Support
   if (input.mentalSupport) {
-    details.push("Access to mental support groups helped buffer stress and improve resilience <a href='#ref39'>[39]</a>.");
+    details.push("Access to mental support groups helped buffer stress and improve resilience. These services are often peer-organized or volunteer-led, and would be at risk of disappearing without them <a href='#ref39'>[39]</a>.");
   }
 
-  // 👥 Gruppen
+  // 👥 Soziale Gruppen
   if (input.socialGroup) {
-    details.push("Involvement in social or student groups stabilized your social network <a href='#ref41'>[41]</a>.");
+    details.push("Involvement in social or student groups stabilized your social network. Without student-led initiatives like ESN or intercultural clubs, such opportunities would be missing <a href='#ref41'>[41]</a>.");
   }
 
-  // 🎓 Bildung
+  // 🎓 Bildungsangebote
   if (input.bildung) {
-    details.push("Your participation in workshops or language cafés supported personal growth and integration <a href='#ref37'>[37]</a>.");
+    details.push("Your participation in workshops or language cafés supported personal growth and integration. These offerings are often created by volunteers, especially for international students <a href='#ref37'>[37]</a>.");
   }
 
-  // 🧩 Hobbies
+  // 🧩 Hobbys
   if (!input.hobbies.length) {
     details.push("Having no hobbies reduced your resilience and self-expression.");
+  } else if (input.hobbies.includes("Choir") || input.hobbies.includes("Theater")) {
+    details.push("Your selected hobbies involve group participation — often run by volunteers (e.g. university choir or theater). These would be at risk of cancellation without unpaid contributors <a href='#ref38'>[38]</a>.");
   }
 
   text += details.join(" ");
@@ -684,6 +672,7 @@ function generateExplanation(pillarScores, input) {
 
   return text;
 }
+
 
 
 function handleEventsCheckbox(value) {
@@ -734,3 +723,4 @@ document.querySelectorAll(".yn-toggle").forEach((checkbox) => {
     }
   });
 });
+
