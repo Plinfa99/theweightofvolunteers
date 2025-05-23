@@ -867,6 +867,18 @@ button {
   border-color: #aac1c4;
 }
 
+.mode-switcher:hover {
+  background-color: white;
+  color: #aac1c4;
+  border-color: #aac1c4;
+}
+
+.toggleBtn:hover {
+  background-color: white;
+  color: #aac1c4;
+  border-color: #aac1c4;
+}
+
 .canvas-text-wrapper {
   display: flex;
   flex-direction: row;
