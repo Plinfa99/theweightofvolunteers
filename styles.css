@@ -35,6 +35,18 @@ html, body {
   background-size: 100% auto;
   padding: 30px 80px 50px;
 }
+.text-content4 {
+  width: 100%;
+  max-width: 1000px;   /* hier kannst du experimentieren z. B. 800px */
+  padding-left: 0px;  /* sorgt für linken Abstand */
+  padding-right: 450px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  margin: 0 auto 10px auto;  /* bleibt zentriert innerhalb des Containers */
+  color: #a6b9bc;
+}
 
 .title-wrapper {
   width: 1010px;
